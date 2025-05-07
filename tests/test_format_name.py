@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../student_info")
+sys.path.append("../student_registration")
 
 from format_details import format_name
 
