@@ -1,4 +1,5 @@
 import format_details
+from Student import Student
 
 
 while True:
@@ -92,3 +93,16 @@ while True:
         print("Invalid characters in input. Please enter a valid number." + str(err))
         continue
 
+
+student_1 = Student(first_name,
+                    last_name,
+                    full_name,
+                    user_age,
+                    subjects,
+                    course_choice,
+                    GENDER_OF_STUDENT,
+                    student_bio
+            )
+
+for k, v in vars(student_1).items():
+    print(k, v)
