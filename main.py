@@ -1,5 +1,6 @@
 import format_details
 from Student import Student
+import connect_mongo as cm
 
 
 while True:
@@ -106,3 +107,11 @@ student_1 = Student(first_name,
 
 for k, v in vars(student_1).items():
     print(k, v)
+
+student_1_serialized = student_1.__dict__
+
+
+cm.check_if_db_exist()
+cm.check_if_collection_exist()
+cm.insert_student_details(student_1_serialized)
+cm.close_connection()
